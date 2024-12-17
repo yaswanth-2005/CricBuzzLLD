@@ -2,12 +2,12 @@ import java.util.*;
 
 public class Inning {
     private int oversCount;
-    private List team;
+    private List<String> team;
     private int score = 0;
     private int wicketsCount = 0;
     private int toWin;
 
-    public Inning(int oversCount, List team, int toWin) {
+    public Inning(int oversCount, List<String> team, int toWin) {
         this.oversCount = oversCount;
         this.team = team;
         this.toWin = toWin;
