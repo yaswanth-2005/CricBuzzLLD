@@ -87,46 +87,47 @@ public class Over {
     private void updatePlayerScore(String run) {
         int ballsFaced = Integer.parseInt(playerScore.get(strike).get(4));
         ballsFaced += 1;
-        playerScore.get(strike).set(4, ballsFaced + " ");
+        playerScore.get(strike).set(4, String.valueOf(ballsFaced));
 
         if (run.equals("W")) {
-            if(latestPlayer + 1 < team.size()) {
+            if (latestPlayer + 1 < team.size()) {
                 strike = latestPlayer + 1;
                 latestPlayer++;
             } else {
                 allOut = true;
                 return;
             }
-        } else if(run.equals("Wd")) {
+        } else if (run.equals("Wd")) {
             wides++;
-        } else if(run.equals("N")) {
+        } else if (run.equals("N")) {
             noBalls++;
         } else {
             int currRuns = Integer.parseInt(run);
             System.out.println("Player run will be : " + currRuns);
             int runsTillNow = Integer.parseInt(playerScore.get(strike).get(1));
             runsTillNow += currRuns;
-            playerScore.get(strike).set(1, runsTillNow + " ");
+            playerScore.get(strike).set(1, String.valueOf(runsTillNow));
 
-            if(currRuns % 2 == 1) {
+            if (currRuns % 2 == 1) {
                 int temp = strike;
                 strike = nonStrike;
                 nonStrike = temp;
-            } else if(currRuns == 4) {
+            } else if (currRuns == 4) {
                 int foursTillNow = Integer.parseInt(playerScore.get(strike).get(2));
                 foursTillNow++;
                 fours++;
-                playerScore.get(strike).set(2, foursTillNow + " ");
-            } else if(currRuns == 6) {
+                playerScore.get(strike).set(2, String.valueOf(foursTillNow));
+            } else if (currRuns == 6) {
                 int sixesTillNow = Integer.parseInt(playerScore.get(strike).get(3));
                 sixesTillNow++;
                 sixes++;
-                playerScore.get(strike).set(3, sixesTillNow + " ");
+                playerScore.get(strike).set(3, String.valueOf(sixesTillNow));
             }
         }
 
         System.out.println("Strike is with : " + strike);
     }
+
 
     public void summary(int overNum) {
         System.out.println("This Over : ");

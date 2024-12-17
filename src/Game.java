@@ -3,10 +3,10 @@ import java.util.*;
 public class Game {
     private int playersCount;
     private int oversCount;
-    private List team1;
-    private List team2;
+    private List<String> team1;
+    private List<String> team2;
 
-    public Game(int playersCount, int oversCount, List team1, List team2) {
+    public Game(int playersCount, int oversCount, List<String> team1, List<String> team2) {
         this.playersCount = playersCount;
         this.oversCount = oversCount;
         this.team1 = team1;
@@ -29,19 +29,19 @@ public class Game {
         this.oversCount = oversCount;
     }
 
-    public List getTeam1() {
+    public List<String> getTeam1() {
         return team1;
     }
 
-    public List getTeam2() {
+    public List<String> getTeam2() {
         return team2;
     }
 
-    public void setTeam1(List team1) {
+    public void setTeam1(List<String> team1) {
         this.team1 = team1;
     }
 
-    public void setTeam2(List team2) {
+    public void setTeam2(List<String> team2) {
         this.team2 = team2;
     }
 
