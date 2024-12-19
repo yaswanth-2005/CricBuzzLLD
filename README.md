@@ -99,6 +99,7 @@ The **Cricket Simulation Program** is a console-based application that simulates
    cd cricket-simulation
 
 2. Running the Program :
+   ```bash
    javac Main.java
    java Main
 
